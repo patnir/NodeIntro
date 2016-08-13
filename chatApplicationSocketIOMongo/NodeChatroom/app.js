@@ -48,7 +48,7 @@ server.listen(app.get('port'), function () {
 io.on('connection', function (socket) {
     console.log('a user connected');
     
-    mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {
+    mongo.connect("mongodb://localhost/test", function (err, db) {
         if (err) {
             console.warn(err.message);
         } else {
@@ -66,7 +66,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('chat', function (msg) {
-        mongo.connect(process.env.CUSTOMCONNSTR_MONGOLAB_URI, function (err, db) {
+        mongo.connect("mongodb://localhost/test", function (err, db) {
             if (err) {
                 console.warn(err.message);
             }
