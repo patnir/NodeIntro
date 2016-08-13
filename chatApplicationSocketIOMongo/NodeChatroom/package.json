@@ -1,0 +1,10 @@
+{
+  "name": "node-chatroom",
+  "version": "0.0.0",
+  "description": "NodeChatroom",
+  "main": "app.js",
+  "author": {
+    "name": "Rahul Patni",
+    "email": ""
+  }
+}
